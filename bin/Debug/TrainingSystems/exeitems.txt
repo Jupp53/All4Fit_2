@@ -1,0 +1,25 @@
+1,Wyciskanie sztangi na lawce prostej,miesnie klatki piersiowej,5,5,80
+2,Pompki na poreczach,miesnie klatki piersiowej,6,3,90
+3,Wyciskanie hantli na lawce skosnej,miesnie klatki piersiowej,10,2,78
+4,Przyciaganie kolan do klatki piersiowej w zwisie na drazku,miesnie brzucha,15,3,65
+5,Skrety tulowia z unoszeniem nog,miesnie brzucha,15,3,75
+6,Brzuszki z pilka lekarska,miesnie brzucha,15,3,75
+7,Uginanie ramion ze sztanga lamana,biceps,5,5,87
+8,Uginanie ramion ze sztanga stojac,biceps,5,5,90
+9,Uginanie mlotkowe,biceps,5,5,107
+10,Przysiady ze sztanga z tylu,miesnie ud,5,5,78
+11,Przysiady ze sztanga z przodu,miesnie ud,5,5,54
+12,Wykroki,miesnie ud,10,3,80
+13,Wspiecia na palce z obciazeniem,miesnie lydek,10,4,90
+14,Wspiecia na palce na maszynie,miesnie lydek,15,3,78
+15,Wioslowanie sztanga,miesnie plecow,5,5,65
+16,Martwy ciag,miesnie plecow,5,5,75
+17,Podciaganie na drazku,miesnie plecow,5,5,75
+18,Wspiecia na palce z obciazeniem,miesnie lydek,10,4,87
+19,Wyciskanie zolnierskie sztanga,barki,5,5,90
+20,Odwrotne rozpietki,barki,5,5,65
+21,Wyciskanie sztangi z klatki stojac,barki,6,3,132
+22,Wyciskanie hantli stojac,barki,6,3,54
+23,Wyciskanie francuskie hantlem oburacz,triceps,5,5,154
+24,Wyciskanie sztangi waskim chwytem na lawce prostej,triceps,6,3,43
+25,Prostowanie ramienia z hantlem w opadzie tulowia,triceps,8,2,265

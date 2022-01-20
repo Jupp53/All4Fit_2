@@ -1,0 +1,7 @@
+Jajecznica,Kasza,Indyk
+Owoce,Makaron,Jogurt
+Jogurt,Krupnik,Jajecznica
+Makaron,Indyk,Kasza
+Jogurt,Krupnik,Owoce
+Jajecznica,Kasza,Makron
+Owoce,Krupnik,Jogurt

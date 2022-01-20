@@ -1,0 +1,2 @@
+admin,admin,Adam,Rog,arog@onet.pl,Admin,50,170,60,Standardowa,cardio
+jakub,123,Jakub,Oskwarek,josk@onet.pl,User,21,190,75,Wegetarianska,cardio

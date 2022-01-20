@@ -1,0 +1,178 @@
+﻿<Window x:Class="All4Fit.AdminHome"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:All4Fit"
+        mc:Ignorable="d"
+        Title="AdminHome" Height="800" Width="1300"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <materialDesign:Card UniformCornerRadius="15" Background="{DynamicResource MaterialDesignPaper}" Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">
+        <materialDesign:DialogHost CloseOnClickAway="True"  x:Name="DialogHost">
+            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <StackPanel>
+                    <materialDesign:PopupBox HorizontalAlignment="Right" Margin="0 20 20 0" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Height="25">
+                        <StackPanel>
+                            <Button x:Name="btn_Logout" Margin="0 8 0 0" Content="Wyloguj" Click="logoutUser"/>
+                            <Button x:Name="btn_Exit" Content="Zamknij aplikację" Click="exitApp"/>
+                        </StackPanel>
+                    </materialDesign:PopupBox>
+                    <Image Margin="0 -150 0 0" Source="Image/logo.png" Height="300"/>
+                    <TextBlock x:Name="tbMenu" Margin="0 0 0 5" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Text="MENU ADMINISTRATORA"/>
+                    <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                        <StackPanel Background="#FFD6FFD6" Margin="10 0 10 0" Width="340" HorizontalAlignment="Left"  >
+                            <StackPanel Margin="0 0 0 20">
+                                <TextBlock x:Name="deleteUserTextBox" FontSize="20" Margin="10 20 10 0">Usuń użytkownika:</TextBlock>
+                                <ComboBox  x:Name="deleteUserComboBox" SelectionChanged="enableChangeDeleteUsertBtn" Margin="0,20,0,0" Padding="5" Width="300" Height="60" FontSize="18"  VerticalAlignment="Stretch" VerticalContentAlignment="Center" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                <Button x:Name="deleteUsertBtn" Margin="0,10,0,20"  Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Wybierz użytkownika powyżej" Foreground="White" Background="#008037" Click="deleteUser" ></Button>
+                            </StackPanel>
+
+                            <StackPanel  Margin="0 0 0 20">
+                                <TextBlock x:Name="deleteTrainingTextBox" FontSize="20" Margin="10 20 10 0">Usuń system treningowy:</TextBlock>
+                                <ComboBox  x:Name="deleteTrainingComboBox" SelectionChanged="enableChangeDeleteTrainingBtn" Margin="0,20,0,0" Padding="5" Width="300" Height="60" FontSize="18"  VerticalAlignment="Stretch" VerticalContentAlignment="Center" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                <Button x:Name="deleteTrainingBtn" Margin="0,10,0,20"  Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Wybierz system powyżej" Foreground="White" Background="#008037" Click="deleteTraining" ></Button>
+                            </StackPanel>
+
+                            <StackPanel Margin="0 0 0 20">
+                                <TextBlock x:Name="deleteDietTextBox" FontSize="20" Margin="10 20 10 0">Usuń dietę:</TextBlock>
+                                <ComboBox  x:Name="deleteDietComboBox" SelectionChanged="enableChangeDeleteDietBtn" Margin="0,20,0,0" Padding="5" Width="300" Height="60" FontSize="18"  VerticalAlignment="Stretch" VerticalContentAlignment="Center" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                <Button x:Name="deleteDietBtn" Margin="0,10,0,20"  Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Wybierz dietę powyżej" Foreground="White" Background="#008037" Click="deleteDiet" ></Button>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel x:Name="stockPanelTraining" Background="#FFD6FFD6" Margin="0 0 10 0" Width="430">
+                            <TextBlock x:Name="addTreningTextBox" FontSize="20" Margin="10 20 10 0">Dodanie nowego treningu:</TextBlock>
+                            <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Poniedziałek:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex11" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex12" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex13" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex14" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex15" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Wtorek:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left"  x:Name="ex21" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex22" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex23" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex24" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex25" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Środa:</TextBlock>
+                                    <ComboBox x:Uid="" HorizontalAlignment="Left" x:Name="ex31" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex32" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex33" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex34" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex35" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Czwartek:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left"  x:Name="ex41" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex42" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex43" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex44" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex45" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Piątek:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex51" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex52" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex53" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex54" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex55" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Sobota:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex61" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex62" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex63" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex64" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex65" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                                <StackPanel Margin="10 0 0 20">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Niedziela:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex71" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex72" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex73" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex74" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="ex75" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" Width="221" HorizontalAlignment="Center" Height="118">
+                                    <Button x:Name="addTrainingBtn" Margin="0,10,0,20"  Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="100" Width="150" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Dodaj system" Foreground="White" Background="#008037" Click="AddTraining" ></Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel  Background="#FFD6FFD6" Margin="0 0 10 0" Width="430" HorizontalAlignment="Left">
+                            <TextBlock x:Name="addDietTextBox" FontSize="20" Margin="10 20 10 0">Dodanie nowego treningu:</TextBlock>
+                            <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Poniedziałek:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet11" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet12" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet13" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Wtorek:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left"  x:Name="diet21" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet22" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet23" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Środa:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet31" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet32" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet33" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Czwartek:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left"  x:Name="diet41" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet42" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet43" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Piątek:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet51" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet52" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet53" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                                <StackPanel Margin="10 0 0 0">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Sobota:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet61" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet62" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet63" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                                <StackPanel Margin="10 0 0 20">
+                                    <TextBlock FontSize="13" Margin="10 0 10 0">Niedziela:</TextBlock>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet71" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet72" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                    <ComboBox HorizontalAlignment="Left" x:Name="diet73" Padding="5" Width="200" Height="30" FontSize="18" BorderThickness="2" BorderBrush="{DynamicResource MaterialDesignDivider}" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
+                                </StackPanel>
+                                <StackPanel VerticalAlignment="Center" Width="221" HorizontalAlignment="Center" Height="118">
+                                    <Button x:Name="addDietBtn" Margin="0,10,0,20"  Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="100" Width="150" materialDesign:ButtonAssist.CornerRadius="10" FontSize="18" Content="Dodaj dietę" Foreground="White" Background="#008037" Click="AddDiet" ></Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </materialDesign:DialogHost>
+    </materialDesign:Card>
+</Window>

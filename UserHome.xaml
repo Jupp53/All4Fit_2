@@ -1,0 +1,43 @@
+﻿<Window x:Class="All4Fit.UserHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:All4Fit"
+        mc:Ignorable="d"
+        Title="UserHome" Height="800" Width="450"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <materialDesign:Card UniformCornerRadius="15" Background="{DynamicResource MaterialDesignPaper}" Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">
+        <materialDesign:DialogHost CloseOnClickAway="True"  x:Name="DialogHost">
+            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <StackPanel Height="1136">
+                    <materialDesign:PopupBox HorizontalAlignment="Right" Margin="0 20 20 0" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Height="25">
+                        <StackPanel>
+                            <Button x:Name="btn_Logout" Margin="0 8 0 0" Content="Wyloguj" Click="logoutUser"/>
+                            <Button x:Name="btn_Exit" Content="Zamknij aplikację" Click="exitApp"/>
+                        </StackPanel>
+                    </materialDesign:PopupBox>
+                    <Image Margin="0 -150 0 0" Source="Image/logo.png" Height="300"/>
+                    <TextBlock x:Name="tbMenu" Margin="0 0 0 5" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Text="MENU"/>
+                    <StackPanel Margin="0,20,0,0">
+                        <Image Source="Image/BMIbanner.png"/>
+                        <Button Margin="0,-2,0,0" x:Name="bmiBtn" IsHitTestVisible="False" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="405" FontSize="25" Content="BMI" BorderBrush="Transparent" Foreground="White" Background="#008037"  HorizontalAlignment="Left" />
+                    </StackPanel>
+                    <StackPanel Margin="0,20,0,0">
+                        <Image Source="Image/banner6.png" />
+                        <Button x:Name="treningBtn" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="400" FontSize="25" Content="Trening" Foreground="White" Background="#008037"  HorizontalAlignment="Left" Click="openTraining"></Button>
+                    </StackPanel>
+                    <StackPanel Margin="0,20,0,0">
+                        <Image Source="Image/banner2.jpg" />
+                        <Button x:Name="dietBtn" Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="53" Width="400" FontSize="25" Content="Dieta" Foreground="White" Background="#008037"  HorizontalAlignment="Left" Click="openDiet"></Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </materialDesign:DialogHost>
+    </materialDesign:Card>
+</Window>

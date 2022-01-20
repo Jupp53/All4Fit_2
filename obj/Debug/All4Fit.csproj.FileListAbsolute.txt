@@ -1,0 +1,60 @@
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\bin\Debug\All4Fit.exe.config
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\bin\Debug\All4Fit.exe
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\bin\Debug\All4Fit.pdb
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit.csproj.AssemblyReference.cache
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\App.g.cs
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit_MarkupCompile.cache
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit_MarkupCompile.lref
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit.g.resources
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit.Properties.Resources.resources
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit.csproj.GenerateResource.cache
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit.csproj.CoreCompileInputs.cache
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit.exe
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit.pdb
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\bin\Debug\MaterialDesignColors.dll
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\bin\Debug\MaterialDesignColors.pdb
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\App.baml
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit.csproj.CopyComplete
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\Logowanie.g.cs
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\Logowanie.baml
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\Rejstracja.g.cs
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\Rejstracja.baml
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\bin\Debug\Database3.accdb
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\All4Fit_Content.g.cs
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\Menu.g.cs
+C:\Users\jakub\Desktop\Nowy folder\All4Fit\obj\Debug\Menu.baml
+D:\Projekt\bin\Debug\All4Fit.exe.config
+D:\Projekt\bin\Debug\All4Fit.exe
+D:\Projekt\bin\Debug\All4Fit.pdb
+D:\Projekt\bin\Debug\MaterialDesignColors.dll
+D:\Projekt\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Projekt\bin\Debug\MaterialDesignColors.pdb
+D:\Projekt\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Projekt\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Projekt\obj\Debug\All4Fit.csproj.AssemblyReference.cache
+D:\Projekt\obj\Debug\Logowanie.g.cs
+D:\Projekt\obj\Debug\Rejstracja.g.cs
+D:\Projekt\obj\Debug\App.g.cs
+D:\Projekt\obj\Debug\All4Fit_MarkupCompile.cache
+D:\Projekt\obj\Debug\All4Fit_MarkupCompile.lref
+D:\Projekt\obj\Debug\App.baml
+D:\Projekt\obj\Debug\Logowanie.baml
+D:\Projekt\obj\Debug\Rejstracja.baml
+D:\Projekt\obj\Debug\All4Fit.g.resources
+D:\Projekt\obj\Debug\All4Fit.Properties.Resources.resources
+D:\Projekt\obj\Debug\All4Fit.csproj.GenerateResource.cache
+D:\Projekt\obj\Debug\All4Fit.csproj.CoreCompileInputs.cache
+D:\Projekt\obj\Debug\All4Fit.csproj.CopyComplete
+D:\Projekt\obj\Debug\All4Fit.exe
+D:\Projekt\obj\Debug\All4Fit.pdb
+D:\Projekt\obj\Debug\UserHome.g.cs
+D:\Projekt\obj\Debug\UserHome.baml
+D:\Projekt\obj\Debug\AdminHome.g.cs
+D:\Projekt\obj\Debug\AdminHome.baml
+D:\Projekt\obj\Debug\DietPanel.g.cs
+D:\Projekt\obj\Debug\DietPanel.baml
+D:\Projekt\obj\Debug\TrainingPanel.g.cs
+D:\Projekt\obj\Debug\TrainingPanel.baml

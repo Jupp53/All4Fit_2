@@ -1,0 +1,7 @@
+Kanapka,Ryż,Surówka
+Surówka,Makaron,Ryż
+Kasza,Makaron,Jajecznica
+Surówka,Rosół,Ryż
+Kanapka,Ryż,Frytki
+Surówka,Makaron,Kanapka
+Frytki,Kanapka,Frytki
